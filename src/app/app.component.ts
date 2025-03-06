@@ -86,7 +86,9 @@ export class AppComponent implements OnInit {
 
   save(): void {
     const index = (this.grid as GridComponent).getSelectedRowIndexes()[0];
-    (this.grid as GridComponent).updateRow(index, this.selectedProduct);
+    if(index !== undefined && index !== null && index !== -1) {
+      (this.grid as GridComponent).updateRow(index, this.selectedProduct);
+    }
   }
 
   rowSelectHandler(args: RowSelectEventArgs): void {
