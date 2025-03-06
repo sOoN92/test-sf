@@ -74,7 +74,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.dropdown$.subscribe((res) => {
-      console.log(res);
       this.dropdown = res;
     });
   }
